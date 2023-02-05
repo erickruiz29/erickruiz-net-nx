@@ -9,7 +9,7 @@
   }
 
   &.menu-list {
-    @include media-breakpoint-between(xs, sm) {
+    @include media-breakpoint-between(xs, md) {
       display: none;
     }
     

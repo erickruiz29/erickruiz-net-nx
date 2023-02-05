@@ -11,7 +11,43 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "incremental": true,
-    "types": ["jest", "node"]
+    "types": ["jest", "node"],
+    "baseUrl": ".",
+    "paths": {
+      "@components/*": [
+        "src/components/*"
+      ],
+      "@components": [
+        "src/components"
+      ],
+      "@styles/*": [
+        "src/styles/*"
+      ],
+      "@styles": [
+        "src/styles"
+      ],
+      "@public/*": [
+        "public/*"
+      ],
+      "@public": [
+        "public"
+      ],
+      "@components/icons/*": [
+        "src/components/icons/*"
+      ],
+      "@components/icons": [
+        "src/components/icons"
+      ],
+      "@i18n": [
+        "./i18n"
+      ],
+      "@test/*": [
+        "test/*"
+      ],
+      "@test": [
+        "test"
+      ]
+    },
   },
   "include": ["**/*.ts", "**/*.tsx", "**/*.js", "**/*.jsx", "next-env.d.ts"],
   "exclude": [
@@ -19,5 +55,5 @@
     "jest.config.ts",
     "src/**/*.spec.ts",
     "src/**/*.test.ts"
-  ]
+  ],
 }

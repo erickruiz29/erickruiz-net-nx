@@ -1,18 +1,11 @@
-import { AppProps } from 'next/app';
-import Head from 'next/head';
-import './styles.css';
+import React from "react";
+import { AppProps } from "next/app";
+import "@styles/app.scss";
+import "@styles/global.scss";
+// import { appWithTranslation } from "@i18n";
 
-function CustomApp({ Component, pageProps }: AppProps) {
-  return (
-    <>
-      <Head>
-        <title>Welcome to ihm-santaana!</title>
-      </Head>
-      <main className="app">
-        <Component {...pageProps} />
-      </main>
-    </>
-  );
+function MyApp({ Component, pageProps }: AppProps): JSX.Element {
+  return <Component {...pageProps} />;
 }
 
-export default CustomApp;
+export default MyApp;

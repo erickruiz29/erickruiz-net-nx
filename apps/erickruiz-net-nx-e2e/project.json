@@ -1,19 +1,19 @@
 {
-  "name": "ihm-santaana-e2e",
+  "name": "erickruiz-net-nx-e2e",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "apps/ihm-santaana-e2e/src",
+  "sourceRoot": "apps/erickruiz-net-nx-e2e/src",
   "projectType": "application",
   "targets": {
     "e2e": {
       "executor": "@nrwl/cypress:cypress",
       "options": {
-        "cypressConfig": "apps/ihm-santaana-e2e/cypress.config.ts",
-        "devServerTarget": "ihm-santaana:serve:development",
+        "cypressConfig": "apps/erickruiz-net-nx-e2e/cypress.config.ts",
+        "devServerTarget": "erickruiz-net-nx:serve:development",
         "testingType": "e2e"
       },
       "configurations": {
         "production": {
-          "devServerTarget": "ihm-santaana:serve:production"
+          "devServerTarget": "erickruiz-net-nx:serve:production"
         }
       }
     },
@@ -21,10 +21,10 @@
       "executor": "@nrwl/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["apps/ihm-santaana-e2e/**/*.{js,ts}"]
+        "lintFilePatterns": ["apps/erickruiz-net-nx-e2e/**/*.{js,ts}"]
       }
     }
   },
   "tags": [],
-  "implicitDependencies": ["ihm-santaana"]
+  "implicitDependencies": ["erickruiz-net-nx"]
 }

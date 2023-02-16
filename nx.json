@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/nx/schemas/nx-schema.json",
-  "npmScope": "ihm-santaana",
+  "npmScope": "erickruiz-net-nx",
   "tasksRunnerOptions": {
     "default": {
       "runner": "@nrwl/nx-cloud",

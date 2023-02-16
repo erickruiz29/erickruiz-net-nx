@@ -1,7 +1,7 @@
 {
-  "name": "ihm-santaana",
+  "name": "erickruiz-net-nx",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "apps/ihm-santaana",
+  "sourceRoot": "apps/erickruiz-net-nx",
   "projectType": "application",
   "targets": {
     "build": {
@@ -9,12 +9,12 @@
       "outputs": ["{options.outputPath}"],
       "defaultConfiguration": "production",
       "options": {
-        "root": "apps/ihm-santaana",
-        "outputPath": "dist/apps/ihm-santaana"
+        "root": "apps/erickruiz-net-nx",
+        "outputPath": "dist/apps/erickruiz-net-nx"
       },
       "configurations": {
         "development": {
-          "outputPath": "apps/ihm-santaana"
+          "outputPath": "apps/erickruiz-net-nx"
         },
         "production": {}
       }
@@ -23,16 +23,16 @@
       "executor": "@nrwl/next:server",
       "defaultConfiguration": "development",
       "options": {
-        "buildTarget": "ihm-santaana:build",
+        "buildTarget": "erickruiz-net-nx:build",
         "dev": true
       },
       "configurations": {
         "development": {
-          "buildTarget": "ihm-santaana:build:development",
+          "buildTarget": "erickruiz-net-nx:build:development",
           "dev": true
         },
         "production": {
-          "buildTarget": "ihm-santaana:build:production",
+          "buildTarget": "erickruiz-net-nx:build:production",
           "dev": false
         }
       }
@@ -40,14 +40,14 @@
     "export": {
       "executor": "@nrwl/next:export",
       "options": {
-        "buildTarget": "ihm-santaana:build:production"
+        "buildTarget": "erickruiz-net-nx:build:production"
       }
     },
     "test": {
       "executor": "@nrwl/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "apps/ihm-santaana/jest.config.ts",
+        "jestConfig": "apps/erickruiz-net-nx/jest.config.ts",
         "passWithNoTests": true
       },
       "configurations": {
@@ -61,7 +61,7 @@
       "executor": "@nrwl/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["apps/ihm-santaana/**/*.{ts,tsx,js,jsx}"]
+        "lintFilePatterns": ["apps/erickruiz-net-nx/**/*.{ts,tsx,js,jsx}"]
       }
     }
   },

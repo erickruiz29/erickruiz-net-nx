@@ -24,6 +24,21 @@
 }
 
 .main-content {
-  color: $white;
-  background-color: $gray-700;
+  color: $gray-700;
+  background-color: $white;
+
+  &.primary {
+    color: $white;
+    background-color: $primary;
+  }
+
+  &.secondary {
+    color: $white;
+    background-color: $secondary;
+  }
+
+  &.tertiary {
+    color: $white;
+    background-color: $gray-700;
+  }
 }

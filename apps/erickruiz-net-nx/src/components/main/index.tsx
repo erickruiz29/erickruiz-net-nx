@@ -1,39 +1,39 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 
+function scrollListener(el: HTMLDivElement) {
+  const elRect = el.getBoundingClientRect();
+  if (window.scrollY > elRect.height / 2) {
+    document.body.dataset['scrolledPast'] = 'true'
+  } else {
+    document.body.dataset['scrolledPast'] = 'false'
+  }
+}
+
 export const Main: React.FC = () => {
+  const topSection = useRef<HTMLDivElement>(null)
+  useEffect(() => {
+    if (!topSection.current) return;
+    window.addEventListener("scroll", (e) => { scrollListener(topSection.current) })
+    return () => {
+      window.removeEventListener("scroll", (e) => { scrollListener(topSection.current) })
+    }
+  }, [topSection])
+
   return (
     <Container className="d-flex flex-column" fluid>
-      <Row className="vh-100-header">
-        <Col xl={{span: 2, order: 1}} lg={3} className={"content-gutter left-gutter menu-list"}>
-          Left gutter and mobile menu
-        </Col>
-        <Col xl={{span: 2, order: 3}} className={"content-gutter right-gutter d-none d-xl-block"}>
-          Right sidebar on xl
-        </Col>
-        <Col xl={{span: 8, order: 2}}  md={12} lg={9} className={"main-content primary"}>
+      <Row className="vh-100-header" id="top" ref={topSection}>
+        <Col xl={{span: 12}}  md={12} lg={12} className={"main-content primary"}>
           Main section!!
         </Col>
       </Row>
-      <Row className="vh-100-header">
-        <Col xl={{span: 2, order: 1}} lg={3} className={"content-gutter left-gutter menu-list"}>
-          Left gutter and mobile menu
-        </Col>
-        <Col xl={{span: 2, order: 3}} className={"content-gutter right-gutter d-none d-xl-block"}>
-          Right sidebar on xl
-        </Col>
-        <Col xl={{span: 8, order: 2}}  md={12} lg={9} className={"main-content secondary"}>
+      <Row className="vh-100-header" id="about">
+        <Col xl={{span: 12}}  md={12} lg={12} className={"main-content secondary"}>
           Main section!!
         </Col>
       </Row>
-      <Row className="vh-100-header">
-        <Col xl={{span: 2, order: 1}} lg={3} className={"content-gutter left-gutter menu-list"}>
-          Left gutter and mobile menu
-        </Col>
-        <Col xl={{span: 2, order: 3}} className={"content-gutter right-gutter d-none d-xl-block"}>
-          Right sidebar on xl
-        </Col>
-        <Col xl={{span: 8, order: 2}}  md={12} lg={9} className={"main-content tertiary"}>
+      <Row className="vh-100-header" id="projects">
+        <Col xl={{span: 12}}  md={12} lg={12} className={"main-content tertiary"}>
           Main section!!
         </Col>
       </Row>

@@ -1,28 +1,3 @@
-.content-gutter {
-  color: $black;
-  background-color: $gray-200;
-
-  @include media-breakpoint-between(lg, xl) {
-    &.left-gutter {
-      box-shadow: inset -5px 0px 10px $gray-500;
-    }
-  }
-
-  &.menu-list {
-    @include media-breakpoint-between(xs, md) {
-      display: none;
-    }
-    
-    [data-show-mobile-menu=true] & {
-      display: initial;
-    }
-  }
-
-  &.right-gutter {
-    box-shadow: inset 5px 0 10px $gray-500;
-  }
-}
-
 .main-content {
   color: $gray-700;
   background-color: $white;
